@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Destruction Derby",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "destruction-derby-recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "SCES-00008"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Destruction Derby",
+    "id": "SCES-00008",
+    "boot_exe": "SCES_000.08"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Destruction Derby (Europe).cue",
+    "bin_name": "Destruction Derby (Europe) (Track 1).bin",
+    "track_counts": [
+      20
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 17505936,
+      "md5": "404b066fdb3ca0e6df736693e3a302c7",
+      "sha1": "09afab875c289d231b989730fd0a9d3e3159a13e",
+      "crc32": "903f6210"
+    },
+    "disc_fp": "6548ae45e650e23a7de96a1bbacd8ec4c55e0b37424e989e46c410d3c8a628e7"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x800AC1B8",
+    "text_size": "0x000AC800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 631,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

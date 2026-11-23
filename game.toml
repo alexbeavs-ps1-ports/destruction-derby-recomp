@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Destruction Derby"
+id = "SCES-00008"
+players = 1
+exe = "disc/SCES_000.08"
+disc = "disc/Destruction Derby (Europe).cue"
+discs = ["disc/Destruction Derby (Europe).cue"]
+disc_serials = ["SCES-00008"]
+load_address = "0x80010000"
+entry_pc = "0x800AC1B8"
+text_size = "0x000AC800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Destruction Derby (Europe) (Track 1).bin"
+cue_name = "Destruction Derby (Europe).cue"
+boot_exe = "SCES_000.08"
+known_sizes = [17505936]
+known_md5 = [
+  "404b066fdb3ca0e6df736693e3a302c7",
+]
+known_sha1 = [
+  "09afab875c289d231b989730fd0a9d3e3159a13e",
+]
+known_crc32 = [
+  "903f6210",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Destruction Derby Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 20
+required_disc_fp = "6548ae45e650e23a7de96a1bbacd8ec4c55e0b37424e989e46c410d3c8a628e7"
